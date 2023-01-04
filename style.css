@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background: #000;
+
+}
+
+h2 {
+  text-align: center;
+  margin: 25px auto;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  font-size: 70px;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  height: 400px;
+}
+
+.tanah {
+  position: relative;
+  width: 140px;
+  height: 160px;
+  margin-top: 50px; 
+  overflow: hidden;
+}
+
+.tanah::after {
+  content: '';
+  display: block;
+  width: 140px;
+  height: 100px;
+  background: url(pdi.JPEG) bottom center no-repeat;
+  background-size: 90%;
+  border-radius: 3px;
+  position: absolute;
+  margin-left: -3px;
+  margin-top: 110px;
+}
+
+.tikus {
+  margin-top: 110px;
+  position: absolute;
+  transition: margin-top 0.06s;
+}
+ 
+.tikus.muncul {
+  margin-top: 0;
+}
+
+button {
+  outline: none;
+  border-radius: 6px;
+  font-size: 20px;
+  margin-top: 30px;
+  width: 110px;
+  height: 75px;
+  color: #fff;
+  background: #000;
+  margin-left: 8px;
+  box-shadow: -5px 6px #fff;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translate(-6px, 6px);
+}
+
+body button:nth-child(2) {
+   background: red;
+ }
